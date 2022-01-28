@@ -224,7 +224,7 @@ public final class Guardian extends JavaPlugin {
     }
 
     public String ChatColor(String string) {
-        return ChatColor.translateAlternateColorCodes('&', "&6<<Guardian>> " + string);
+        return ChatColor.translateAlternateColorCodes('&', "&6<<&lGuardian&6>> " + string);
     }
 
     public void broadcast(String string) {
