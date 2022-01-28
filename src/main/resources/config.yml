@@ -1,0 +1,45 @@
+# Check for newest plugin updates, and inform about them
+update-checker: true
+
+# Kill the player who decides to combatlog
+killCombatlogger: true
+# Remove fly when combat tagged
+removeFly: true
+# Remove invisibility potion effect when tagged
+removeInvisibilityPotionEffect: true
+# Remove disguise from player when combat tagged /!\ REQUIRES LibsDisguise /!\
+removeDisguise: true
+# Remove creative mode when attacking someone and tagging them
+removeCreative: true
+# Prevent ender pearl usage while combat tagged
+noEnderpearl: false
+# Prevent chorus fruit usage while combat tagged
+noChorusfruit: false
+# Set players who have been combat tagged to glow (Works on 1.9+ versions only)
+taggedGlow: false
+
+# Disable combatlogging from different worlds
+disabled_worlds:
+  - example_world
+  - world2
+
+extras:
+  death_effects:
+    enabled: true
+    silent: false
+
+messages:
+  broadcast_combatlog:
+    enabled: true
+    msg: "&4&l<!> &c[PLAYER] logged out during the combat and will be punished!"
+  tag_message:
+    enabled: true
+    msg: "&4&l<!> &cYou have been tagged by [PLAYER]! Do not leave the server!"
+  flying_removed: "&cYou can't fly while combat tagged!"
+  inivisibility_potion_removed: "&cYour invisibility potion effect has ended because you got combat tagged!"
+  disguise_removed: "&cYour disguise was removed because you got combat tagged!"
+  creative_removed: "&cYour creative mode was changed to survival because you damaged player on survival"
+  teleportation_prevented: "&cYou can not teleport when you are combat tagged!"
+  not_tagged: "&aYou are not in combat"
+  tagged: "&cYou are in combat"
+  not_tagged_anymore: "&aYou are not in combat anymore"
