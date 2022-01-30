@@ -14,7 +14,7 @@ public class Variables {
         plugin.getLogger().info("Loading config.yml");
         plugin.updateCheckEnabled = plugin.getConfig().getBoolean("update-checker");
         plugin.combatlogBroadcast = plugin.getConfig().getBoolean("messages.broadcast_combatlog.enabled");
-        plugin.combatlogBroadcastMsg = plugin.getConfig().getString("messages.broadcast-combatlog.msg");
+        plugin.combatlogBroadcastMsg = plugin.getConfig().getString("messages.broadcast_combatlog.msg");
         plugin.killLogger = plugin.getConfig().getBoolean("killCombatlogger");
         plugin.disableWorldNames = plugin.getConfig().getStringList("disabled_worlds");
         plugin.tagMsgEnabled = plugin.getConfig().getBoolean("messages.tag_message.enabled");
