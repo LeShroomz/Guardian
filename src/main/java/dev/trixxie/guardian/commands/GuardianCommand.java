@@ -1,8 +1,7 @@
 package dev.trixxie.guardian.commands;
 
-import dev.trixxie.felineapi.utility.MessageUtility;
-import dev.trixxie.felineapi.utility.VersionUtility;
 import dev.trixxie.guardian.Guardian;
+import dev.trixxie.guardian.utils.VersionUtility;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -15,6 +14,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class GuardianCommand implements CommandExecutor {
 
@@ -58,7 +58,7 @@ public class GuardianCommand implements CommandExecutor {
                     addPluginVersionInformation(versionList);
                     versionList.add("&f");
 
-                    List<String> colorList = MessageUtility.colorList(versionList);
+                    List<String> colorList = dev.trixxie.felineapi.utility.MessageUtility.colorList(versionList);
                     for(String message : colorList) {
                         sender.sendMessage(message);
                     }

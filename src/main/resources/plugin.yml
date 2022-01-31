@@ -4,8 +4,6 @@ main: dev.trixxie.guardian.Guardian
 api-version: 1.18
 authors: [ Trixxie ]
 description: Guardian makes the Minecraft pvp more fair
-depend:
-  - FelineAPI
 softdepend:
   - LibsDisguises
   - PlaceholderAPI
