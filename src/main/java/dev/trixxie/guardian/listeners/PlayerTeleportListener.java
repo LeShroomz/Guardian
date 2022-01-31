@@ -27,18 +27,18 @@ public class PlayerTeleportListener implements Listener {
                     || e.getCause().equals(TeleportCause.END_PORTAL)
                     || e.getCause().equals(TeleportCause.UNKNOWN)){
                 e.setCancelled(true);
-                p.sendMessage(plugin.ChatColor(plugin.getConfig().getString("messages.teleportation_prevented")));
+                p.sendMessage(plugin.ChatColor(plugin.getConfig().getString("messages.teleportation_prevented"), true));
             }
             if(plugin.preventChorusfruit && !ServerVersion.oldVersion()){
                 if(e.getCause().equals(TeleportCause.CHORUS_FRUIT)){
                     e.setCancelled(true);
-                    p.sendMessage(plugin.ChatColor(plugin.getConfig().getString("messages.teleportation_prevented")));
+                    p.sendMessage(plugin.ChatColor(plugin.getConfig().getString("messages.teleportation_prevented"), true));
                 }
             }
             if(plugin.preventEnderpearl){
                 if(e.getCause().equals(TeleportCause.ENDER_PEARL)){
                     e.setCancelled(true);
-                    p.sendMessage(plugin.ChatColor(plugin.getConfig().getString("messages.teleportation_prevented")));
+                    p.sendMessage(plugin.ChatColor(plugin.getConfig().getString("messages.teleportation_prevented"), true));
                 }
             }
         }

@@ -20,6 +20,6 @@ public class PlayerUntagListener implements Listener {
         if(plugin.taggedGlow){
             p.setGlowing(false);
         }
-        p.sendMessage(plugin.ChatColor(plugin.getConfig().getString("messages.not_tagged_anymore")));
+        p.sendMessage(plugin.ChatColor(plugin.getConfig().getString("messages.not_tagged_anymore"), true));
     }
 }

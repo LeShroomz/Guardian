@@ -21,7 +21,7 @@ public class FlightToggleListener implements Listener {
         if(plugin.removeFlight && !p.hasPermission("guardian.bypass") && plugin.taggedPlayers.containsKey(p.getUniqueId()) && p.isFlying()){
             p.setFlying(false);
             e.setCancelled(true);
-            p.sendMessage(plugin.ChatColor(plugin.noFlyMsg));
+            p.sendMessage(plugin.ChatColor(plugin.noFlyMsg, true));
         }
     }
 }

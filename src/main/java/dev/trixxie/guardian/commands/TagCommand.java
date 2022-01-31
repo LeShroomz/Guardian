@@ -21,9 +21,9 @@ public class TagCommand implements CommandExecutor {
         if(sender instanceof Player){
             Player p = (Player) sender;
             if(plugin.taggedPlayers.containsKey(p.getUniqueId())) {
-                p.sendMessage(plugin.ChatColor(plugin.getConfig().getString("messages.tagged")));
+                p.sendMessage(plugin.ChatColor(plugin.getConfig().getString("messages.tagged"), true));
             } else {
-                p.sendMessage(plugin.ChatColor(plugin.getConfig().getString("messages.not_tagged")));
+                p.sendMessage(plugin.ChatColor(plugin.getConfig().getString("messages.not_tagged"), true));
             }
         } else {
             plugin.logInfo("This command can't be run from console!");

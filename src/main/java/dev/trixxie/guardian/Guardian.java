@@ -223,12 +223,16 @@ public final class Guardian extends JavaPlugin {
         return tagDuration - (getCurrentTime() - (Long) taggedPlayers.get(id).longValue());
     }
 
-    public String ChatColor(String string) {
-        return ChatColor.translateAlternateColorCodes('&', "&6<<&lGuardian&6>> " + string);
+    public String ChatColor(String string, boolean prefix) {
+        if(prefix) {
+            return ChatColor.translateAlternateColorCodes('&', "&6<<&lGuardian&6>> " + string);
+        } else {
+            return ChatColor.translateAlternateColorCodes('&', string);
+        }
     }
 
     public void broadcast(String string) {
-        getServer().broadcastMessage(ChatColor(string));
+        getServer().broadcastMessage(ChatColor(string, false));
     }
 
     public void logInfo(String string) {

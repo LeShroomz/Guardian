@@ -22,7 +22,7 @@ public class PlayerGamemodeListener implements Listener {
             if(!p.getGameMode().equals(GameMode.SURVIVAL)){
                 p.setGameMode(GameMode.SURVIVAL);
                 e.setCancelled(true);
-                p.sendMessage(plugin.ChatColor(plugin.getConfig().getString("messages.creative_removed")));
+                p.sendMessage(plugin.ChatColor(plugin.getConfig().getString("messages.creative_removed"), true));
             }
         }
     }

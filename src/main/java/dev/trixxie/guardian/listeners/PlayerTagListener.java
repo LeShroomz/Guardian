@@ -39,11 +39,11 @@ public class PlayerTagListener implements Listener {
                     plugin.taggedPlayers.put(p.getUniqueId(), plugin.getCurrentTime());
 
                     if(plugin.tagMsgEnabled){
-                        p.sendMessage(plugin.ChatColor(plugin.getConfig().getString("messages.tag_message.msg")));
+                        p.sendMessage(plugin.ChatColor(plugin.getConfig().getString("messages.tagged"), true));
                     }
                     if(plugin.removeFlight && p.isFlying()){
                         p.setFlying(false);
-                        p.sendMessage(plugin.ChatColor(plugin.noFlyMsg));
+                        p.sendMessage(plugin.ChatColor(plugin.noFlyMsg, true));
                     }
                     if(plugin.removeInvisPotion){
                         removeInvis(p);
@@ -51,7 +51,7 @@ public class PlayerTagListener implements Listener {
                     if(plugin.usesLibsDisguise && plugin.removeDisguise){
                         if(DisguiseAPI.isDisguised(p)){
                             DisguiseAPI.undisguiseToAll(p);
-                            p.sendMessage(plugin.ChatColor(plugin.getConfig().getString("disguise_removed")));
+                            p.sendMessage(plugin.ChatColor(plugin.getConfig().getString("disguise_removed"), true));
                         }
                     }
 
@@ -66,12 +66,12 @@ public class PlayerTagListener implements Listener {
                     if(plugin.usesLibsDisguise && plugin.removeDisguise){
                         if(DisguiseAPI.isDisguised(p)){
                             DisguiseAPI.undisguiseToAll(p);
-                            p.sendMessage(plugin.ChatColor(plugin.getConfig().getString("disguise_removed")));
+                            p.sendMessage(plugin.ChatColor(plugin.getConfig().getString("disguise_removed"), true));
                         }
                     }
                     if(plugin.removeFlight && p.isFlying()){
                         p.setFlying(false);
-                        p.sendMessage(plugin.ChatColor(plugin.noFlyMsg));
+                        p.sendMessage(plugin.ChatColor(plugin.noFlyMsg, true));
                     }
 
                     if(plugin.removeInvisPotion){
@@ -101,11 +101,11 @@ public class PlayerTagListener implements Listener {
                     plugin.taggedPlayers.put(p.getUniqueId(), plugin.getCurrentTime());
 
                     if(plugin.tagMsgEnabled){
-                        p.sendMessage(plugin.ChatColor(plugin.getConfig().getString("messages.tag_message.msg")));
+                        p.sendMessage(plugin.ChatColor(plugin.getConfig().getString("messages.tag_message.msg"), false));
                     }
                     if(plugin.removeFlight && p.isFlying()){
                         p.setFlying(false);
-                        p.sendMessage(plugin.ChatColor(plugin.noFlyMsg));
+                        p.sendMessage(plugin.ChatColor(plugin.noFlyMsg, true));
                     }
                     if(plugin.removeInvisPotion){
                         removeInvis(p);
@@ -113,7 +113,7 @@ public class PlayerTagListener implements Listener {
                     if(plugin.usesLibsDisguise && plugin.removeDisguise){
                         if(DisguiseAPI.isDisguised(p)){
                             DisguiseAPI.undisguiseToAll(p);
-                            p.sendMessage(plugin.ChatColor(plugin.getConfig().getString("disguise_removed")));
+                            p.sendMessage(plugin.ChatColor(plugin.getConfig().getString("disguise_removed"), true));
                         }
                     }
                     if(plugin.taggedGlow && !ServerVersion.oldVersion()){
@@ -127,12 +127,12 @@ public class PlayerTagListener implements Listener {
                     if(plugin.usesLibsDisguise && plugin.removeDisguise){
                         if(DisguiseAPI.isDisguised(p)){
                             DisguiseAPI.undisguiseToAll(p);
-                            p.sendMessage(plugin.ChatColor(plugin.getConfig().getString("disguise_removed")));
+                            p.sendMessage(plugin.ChatColor(plugin.getConfig().getString("disguise_removed"), true));
                         }
                     }
                     if(plugin.removeFlight && p.isFlying()){
                         p.setFlying(false);
-                        p.sendMessage(plugin.ChatColor(plugin.noFlyMsg));
+                        p.sendMessage(plugin.ChatColor(plugin.noFlyMsg, true));
                     }
 
                     if(plugin.removeInvisPotion){
@@ -157,7 +157,7 @@ public class PlayerTagListener implements Listener {
         for(PotionEffect potion : pl.getActivePotionEffects()){
             if(potion.getType().equals(PotionEffectType.INVISIBILITY)){
                 pl.removePotionEffect(PotionEffectType.INVISIBILITY);
-                pl.sendMessage(plugin.ChatColor(plugin.noInvisibility));
+                pl.sendMessage(plugin.ChatColor(plugin.noInvisibility, true));
             }
         }
     }

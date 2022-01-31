@@ -23,7 +23,7 @@ public class PlayerDisguiseListener implements Listener {
             if(plugin.removeDisguise && plugin.taggedPlayers.containsKey(p.getUniqueId())){
                 DisguiseAPI.undisguiseToAll(p);
                 e.setCancelled(true);
-                p.sendMessage(plugin.ChatColor(plugin.getConfig().getString("messages.disguise_removed")));
+                p.sendMessage(plugin.ChatColor(plugin.getConfig().getString("messages.disguise_removed"), true));
             }
         }
     }

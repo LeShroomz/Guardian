@@ -32,7 +32,7 @@ public class PlayerQuitListener implements Listener {
             }
         }
         if(plugin.combatlogBroadcast){
-            plugin.broadcast(plugin.ChatColor(plugin.combatlogBroadcastMsg.replace("[PLAYER]", p.getName())));
+            plugin.broadcast(plugin.ChatColor(plugin.combatlogBroadcastMsg.replace("[PLAYER]", p.getName()), false));
         }
         if(plugin.killLogger){
             p.setHealth(0);

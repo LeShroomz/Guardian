@@ -31,9 +31,9 @@ public class GuardianCommand implements CommandExecutor {
                 if(sender instanceof Player) {
                     if(((Player)sender).hasPermission("guardian.reload")) {
                         plugin.reloadConfigCommand();
-                        sender.sendMessage(plugin.ChatColor("&aConfig reloaded!"));
+                        sender.sendMessage(plugin.ChatColor("&aConfig reloaded!", true));
                     } else {
-                        sender.sendMessage(plugin.ChatColor("&cYou do not have permission to do this (guardian.reload)"));
+                        sender.sendMessage(plugin.ChatColor("&cYou do not have permission to do this (guardian.reload)", true));
                     }
                 } else {
                     plugin.logInfo("Config reloaded!");
@@ -42,9 +42,9 @@ public class GuardianCommand implements CommandExecutor {
             if(args[0].equalsIgnoreCase("version")){
                 if(sender instanceof Player){
                     if(((Player)sender).hasPermission("guardian.version")){
-                        sender.sendMessage(plugin.ChatColor("&cThis command can be run from Console only!"));
+                        sender.sendMessage(plugin.ChatColor("&cThis command can be run from Console only!", true));
                     } else {
-                        sender.sendMessage(plugin.ChatColor("&cYou do not have permission to do this (guardian.version)"));
+                        sender.sendMessage(plugin.ChatColor("&cYou do not have permission to do this (guardian.version)", true));
                     }
                 } else {
                     List<String> versionList = new ArrayList<>();
