@@ -18,4 +18,7 @@ commands:
   guardian:
     usage: /<command>
     description: Manage guardian
-
+permissions:
+  guardian.bypass:
+    default: false
+    description: Gives player immunity to combat tagging
