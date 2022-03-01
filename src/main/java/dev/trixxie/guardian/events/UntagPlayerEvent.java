@@ -7,13 +7,19 @@ import org.bukkit.event.HandlerList;
 
 public class UntagPlayerEvent extends Event implements Cancellable {
 
+    /**
+     * Reasons for untaggin player, for logging purposes
+     */
     public enum UntagCause {
         COMBATLOG,
         KICK,
         TIME_EXPIRE,
         DEATH,
         LAGOUT,
-        SAFE_AREA
+        SAFE_AREA,
+        FORCED,
+        ADMIN,
+        OTHER
     }
 
     private Player player;

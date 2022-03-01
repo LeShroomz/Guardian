@@ -6,6 +6,9 @@ import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
+/**
+ * Called when player combat logs
+ */
 public class PlayerCombatlogEvent extends Event implements Cancellable {
 
     private boolean cancelled;

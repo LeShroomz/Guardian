@@ -1,6 +1,7 @@
 package dev.trixxie.guardian;
 
 import com.tchristofferson.configupdater.ConfigUpdater;
+import dev.trixxie.guardian.api.events.GuardianLoaded;
 import dev.trixxie.guardian.commands.GuardianCommand;
 import dev.trixxie.guardian.commands.GuardianTabComplete;
 import dev.trixxie.guardian.commands.TagCommand;
@@ -11,6 +12,7 @@ import dev.trixxie.guardian.placeholders.TagPlaceholder;
 import dev.trixxie.guardian.utils.Metrics;
 import dev.trixxie.guardian.utils.Updater;
 import dev.trixxie.guardian.utils.Variables;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -72,6 +74,8 @@ public final class Guardian extends JavaPlugin {
                 return combatlogs;
             }
         }));
+
+        Bukkit.getPluginManager().callEvent(new GuardianLoaded());
 
     }
 
